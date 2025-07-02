@@ -23,7 +23,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: "recursive"
-
+      - name: action-rollback
+        run: git reset --hard 5a16418543032c06d03cb483859cec6c2590e9c8
+       
       - name: Setup environment
         uses: ./.github/actions/setup
         with:
